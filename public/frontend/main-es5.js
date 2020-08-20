@@ -1495,8 +1495,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, AuthService);
 
         this.http = http;
-        this.router = router;
-        this.URL = 'http://localhost:3000/'; //dev mode
+        this.router = router; // private readonly URL = 'http://localhost:3000/'; //dev mode
+
+        this.URL = 'http://ec2-18-191-1-193.us-east-2.compute.amazonaws.com/'; //prod mode
 
         this.headers = {
           headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
@@ -1612,8 +1613,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       function BackendService(http) {
         _classCallCheck(this, BackendService);
 
-        this.http = http;
-        this.URL = 'http://localhost:3000/'; //dev mode
+        this.http = http; // private readonly URL = 'http://localhost:3000/'; //dev mode
+
+        this.URL = 'http://ec2-18-191-1-193.us-east-2.compute.amazonaws.com/'; //prod mode
 
         this.headers = {
           headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
