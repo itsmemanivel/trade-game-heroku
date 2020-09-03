@@ -963,7 +963,7 @@
                     this.http = http;
                     this.router = router;
                     // private readonly URL = 'http://localhost:3000/'; //dev mode
-                    this.URL = 'https://trade-game-number-guessing.herokuapp.com/'; //prod mode
+                    this.URL = 'https://trade-game-heroku.herokuapp.com/'; //prod mode
                     this.headers = {
                         headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
                             'Content-Type': 'application/json'
@@ -1043,7 +1043,7 @@
                 constructor(http) {
                     this.http = http;
                     // private readonly URL = 'http://localhost:3000/'; //dev mode
-                    this.URL = 'https://trade-game-number-guessing.herokuapp.com/'; //prod mode
+                    this.URL = 'https://trade-game-heroku.herokuapp.com/'; //prod mode
                     this.headers = {
                         headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
                             'Content-Type': 'application/json'

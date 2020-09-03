@@ -1512,7 +1512,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     this.router = router; // private readonly URL = 'http://localhost:3000/'; //dev mode
 
                     // this.URL = 'http://ec2-18-191-1-193.us-east-2.compute.amazonaws.com/'; //prod mode
-                    this.URL = 'https://trade-game-number-guessing.herokuapp.com/'; //dev mode
+                    this.URL = 'https://trade-game-heroku.herokuapp.com/'; //dev mode
 
                     this.headers = {
                         headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
@@ -1631,7 +1631,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     this.http = http; // private readonly URL = 'http://localhost:3000/'; //dev mode
 
                     // this.URL = 'http://ec2-18-191-1-193.us-east-2.compute.amazonaws.com/'; //prod mode
-                    this.URL = 'https://trade-game-number-guessing.herokuapp.com/'; //dev mode
+                    this.URL = 'https://trade-game-heroku.herokuapp.com/'; //dev mode
 
                     this.headers = {
                         headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
