@@ -85,7 +85,7 @@ app.use('**', express.static(__dirname + '/public/frontend/index.html'));
 
 
 
-app.listen(port, (err, res) => {
+app.listen(process.env.port || 3000, (err, res) => {
 
     console.log("App running on port: " + port);
 });
