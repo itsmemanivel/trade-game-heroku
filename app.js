@@ -14,7 +14,7 @@ var upload = multer();
 
 
 //port
-var port = process.env.port || 3000;
+const { PORT = 3000, LOCAL_ADDRESS = '0.0.0.0' } = process.env
 
 //db
 var DBconfig = require('./admin/config/db');
@@ -85,7 +85,7 @@ app.use('**', express.static(__dirname + '/public/frontend/index.html'));
 
 
 
-app.listen(process.env.port || 3000, (err, res) => {
+app.listen(PORT, LOCAL_ADDRESS, (err, res) => {
 
     console.log("App running on port: " + port);
 });
