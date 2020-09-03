@@ -17,7 +17,7 @@ var upload = multer();
 var port = process.env.port || 3000;
 
 //db
-var DBconfig =require('./admin/config/db');
+var DBconfig = require('./admin/config/db');
 var redisStore = require('connect-redis');
 var client = require('./admin/config/cache');
 var app = express();
@@ -38,36 +38,36 @@ var app = express();
 
 
 //db
-mongoose.connect(DBconfig.db, {useUnifiedTopology: true , useNewUrlParser: true});
+mongoose.connect(DBconfig.db, { useUnifiedTopology: true, useNewUrlParser: true });
 
-mongoose.connection.on('connected',()=>{
-    console.log('connected to db'+DBconfig.db);
+mongoose.connection.on('connected', () => {
+    console.log('connected to db' + DBconfig.db);
 });
 // On Error
 mongoose.connection.on('error', (err) => {
-    console.log('Database error '+err);
-  });
+    console.log('Database error ' + err);
+});
 
 
 
 //cors
 var corsOption = {
     origin: true,
-    methods:'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials:true,
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
     exposeHeaders: ['x-auth-token']
 };
 app.use(cors(corsOption));
-app.use(express.json({limit: '50mb'}));
-app.use(express.urlencoded({limit: '50mb',extended:true,parameterLimit: 1000000}));
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ limit: '50mb', extended: true, parameterLimit: 1000000 }));
 
 
 
 //middlewares
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(methodOverride());
-app.use(upload.array()); 
+app.use(upload.array());
 
 
 
@@ -85,7 +85,7 @@ app.use('**', express.static(__dirname + '/public/frontend/index.html'));
 
 
 
-app.listen(port, (err, res) =>{
+app.listen(port, (err, res) => {
 
-   console.log("App running on port: " + port);
+    console.log("App running on port: " + port);
 });
