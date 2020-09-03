@@ -87,5 +87,5 @@ app.use('**', express.static(__dirname + '/public/frontend/index.html'));
 
 app.listen(PORT, LOCAL_ADDRESS, (err, res) => {
 
-    console.log("App running on port: " + port);
+    console.log("App running on port: " + PORT);
 });
